@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+        <link rel="stylesheet" type="text/css" href="style/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="canonical" href="https://www.fontawesomecheatsheet.com/font-awesome-cheatsheet-5x/">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body style="display: none;">
+        <div id="modal-container" class="modal">
+            <!-- <div class="modal-content">
+                <div class="modal-header">
+                    <span id="close-dialog" class="close">&times;</span>
+                </div>
+                <div class="modal-contents">
+                    <input id="iban" class="input" type="text" placeholder="Iban"/>
+                    <input id="withdraw-amount" class="input only-numbers" type="text" placeholder="0$"/>
+                    <button id="withdraw-deposit" class="button">Onayla</button>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="app-container">
+            <div class="navigation-bar">
+                <div class="branding">
+                    <span><i class="fas fa-bank"></i>VLAST BANK</span>
+                </div>
+                <div class="app-icons">
+                    <i id="close-app" class="fas fa-close"></i>
+                </div>
+            </div>
+
+            <div class="inside-app">
+                <!-- <div class="sidebar">
+                    <div class="menu-item menu-selected">
+                        <span><i class="fas fa-bank menu-icon"></i>Ana Sayfa</span>
+                    </div>
+                    <div class="menu-item">
+                        <span><i class="fas fa-history menu-icon"></i>İşlem Geçmişi</span>
+                    </div>
+                </div> -->
+                <div id="landing-page" class="app" style="display: flex;">
+                    <div class="app-header">
+                        <div style="max-width: 428px; width: 100%;">
+                            <span class="title">Keşfet</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <span class="title">Son İşlemler</span> 
+                            <button id="see-all-history" style="display: none;" class="button">Tümünü Gör</button>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-direction: row; margin-top: 8px;">
+                        <div style="display: table; flex: 1 0 40%; max-width: 400px;">
+                            <div class="creditcard">
+                                <img src="img/card.png"/>
+                                <div class="balance">
+                                    <span>Bakiye</span>
+                                    <span id="account-balance">0$</span>
+                                </div>
+                                <div class="card-number">
+                                    <span>Hesap Numarası</span>
+                                    <span id="account-number"></span>
+                                </div>
+                                <div class="card-holder">
+                                    <span>Kart Sahibi</span>
+                                    <span id="account-owner"></span>
+                                </div>
+                                <div class="card-valid">
+                                    <div class="card-valid-field">
+                                        <span>VALID</span>
+                                        <span>THRU</span>
+                                    </div>
+                                    <div class="arrow-right"></div>
+                                    <span>08/28</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="last-history" class="bank-history" style="margin-left: 16px;">
+                            <div style="display: flex; align-items: center; justify-content: center; width: 100%; text-align: center;">
+                                <span class="none" style="font-size: 26px; font-weight: 700;">Henüz hiç kayıt yok :(</span>
+                            </div>
+                            <!-- <div class="history-item">
+                                <div class="history-item-header">
+                                    <div>
+                                        <i class="fas fa-plus"></i>
+                                        <i class="fas fa-exchange-alt"></i>
+                                    </div>
+                                    <span style="font-weight: 700;">500$</span>
+                                </div>
+                                <div class="history-item-field">
+                                    <span>Gönderici</span>
+                                    <span>Vlast-32615</span>
+                                </div>
+                                <div class="history-item-field">
+                                    <span>Alıcı</span>
+                                    <span>Siz</span>
+                                </div>
+                                <div class="history-item-description">
+                                    <span>Açıklama</span>
+                                    <span>sadaka al lan aç orospu evladı</span>
+                                </div>
+                                <div class="history-item-time">
+                                    <span>31.03.2020 26:08</span>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                    
+                    <span class="title" style="margin-top: 12px;">Hızlı İşlemler</span>
+
+                    <div class="fast-actions">
+                        <div id="fast-action-button" data-type="deposit" class="withdraw-card card button-card" style="background: var(--purple);">
+                            <span><i class="fas fa-piggy-bank"></i>Para Yatır</span>
+                        </div>
+                        <div id="fast-action-button" data-type="withdraw" class="deposit-card card button-card" style="background: var(--blue);">
+                            <span><i class="fas fa-money-bill"></i>Para Çek</span>
+                        </div>
+                        <div id="fast-action-button" data-type="transfer" class="transfer-card card button-card" style="background: var(--green);">
+                            <span><i class="fas fa-exchange-alt"></i>Havale</span>
+                        </div>
+                    </div>
+                    <div class="fast-actions">
+                        <div data-type="deposit" data-amount="100" class="action-card card reverse fast-action-button" style="background: var(--light-purple);">
+                            <div>
+                                <span><i class="fas fa-plus"></i>100$ Yatır</span>
+                            </div>
+                            <div>
+                                <span>Hızlı olarak 100 dolar yatırın.</span>
+                            </div>
+                        </div>
+                        <div data-type="deposit" data-amount="200" class="action-card card reverse fast-action-button" style="background: var(--purple);">
+                            <div>
+                                <span><i class="fas fa-plus"></i>200$ Yatır</span>
+                            </div>
+                            <div>
+                                <span>Hızlı olarak 200 dolar yatırın.</span>
+                            </div>
+                        </div>
+                        <div data-type="withdraw" data-amount="100" class="action-card card reverse fast-action-button" style="background: var(--blue);">
+                            <div>
+                                <span><i class="fas fa-minus"></i>100$ Çek</span>
+                            </div>
+                            <div>
+                                <span>Hızlı olarak 100 dolar çekin.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="bank-history-page" style="display: none;" class="bank-history-page">
+                    <!-- <div class="history-item">
+                        <div class="history-item-header">
+                            <div>
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <span style="font-weight: 700;">500$</span>
+                        </div>
+                        <div class="history-item-field">
+                            <span>Gönderici</span>
+                            <span>Vlast-32615</span>
+                        </div>
+                        <div class="history-item-field">
+                            <span>Alıcı</span>
+                            <span>Siz</span>
+                        </div>
+                        <div class="history-item-description">
+                            <span>Açıklama</span>
+                            <span>sadaka al lan aç orospu evladı</span>
+                        </div>
+                        <div class="history-item-time">
+                            <span>31.03.2020 26:08</span>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <script src="scripts/app.js"></script>
+    </body>
+</html>
