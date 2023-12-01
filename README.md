@@ -5,5 +5,3 @@ FiveM Banking system made by TORCHIZM for discord.gg/vlast
 
 ![Main Menu](/readme/1.png)
 ![Logs](/readme/2.png)
-
-> Thanks [ktsN](https://www.twitch.tv/ktsn) to credit card design
